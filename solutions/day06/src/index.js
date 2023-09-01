@@ -1,39 +1,39 @@
+// index.js
 import React from 'react'
 import ReactDOM from 'react-dom'
+class App extends React.Component {
+  // declaring state
+  state = {
+    count: 0,
+  }
+  // method which add one to the state
 
-const countries = [
-  { name: 'Finland', city: 'Helsinki' },
-  { name: 'Sweden', city: 'Stockholm' },
-  { name: 'Denmark', city: 'Copenhagen' },
-  { name: 'Norway', city: 'Oslo' },
-  { name: 'Iceland', city: 'Reykjavík' },
-]
+  addOne = () => {
+    this.setState({ count: this.state.count + 1 })
+  }
 
-// Country component
-const Country = ({ country: { name, city } }) => {
-  return (
-    <div>
-      <h1>{name}</h1>
-      <small>{city}</small>
-    </div>
-  )
+  // method which subtract one to the state
+  minusOne = () => {
+    this.setState({ count: this.state.count - 1 })
+  }
+  render() {
+    // accessing the state value
+    const count = this.state.count
+    return (
+      <div className='App'>
+        <h1>{count} </h1>
+
+        <div>
+          <button className='btn btn-add' onClick={this.addOne}>
+            +1
+          </button>{' '}
+          <button className='btn btn-minus' onClick={this.minusOne}>
+            -1
+          </button>
+        </div>
+      </div>
+    )
+  }
 }
-
-// countries component
-const Countries = ({ countries }) => {
-  const countryList = countries.map((country) => (
-    <Country key={country.name} country={country} />
-  ))
-  return <div>{countryList}</div>
-}
-const App = () => (
-  <div className='container'>
-    <div>
-      <h1>Countries List</h1>
-      <Countries countries={countries} />
-    </div>
-  </div>
-)
-
 const rootElement = document.getElementById('root')
 ReactDOM.render(<App />, rootElement)
