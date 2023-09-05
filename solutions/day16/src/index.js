@@ -17,7 +17,7 @@ const buttonWithStyles = (CompParam, name = 'default') => {
     },
     {
       name: 'react',
-      backgroundColor: '#61dbfb',
+      backgroundColor: '#61bafb',
       color: '#ffffff',
     },
     {
