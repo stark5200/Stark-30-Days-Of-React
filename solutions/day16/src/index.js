@@ -8,6 +8,7 @@ class App extends Component {
       <Router>
         <div className='App'>
           <h1>React Router DOM</h1>
+          <h2>How about that</h2>  
         </div>
       </Router>
     )
