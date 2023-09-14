@@ -27,17 +27,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 // Home component
 const Home = (props) => <h1>Welcome Home</h1>
 
-class App extends Component {
-  render() {
-    return (
-      <Router>
-        <div className='App'>
-          <Route path='/home' component={Home} />
-        </div>
-      </Router>
-    )
-  }
-}
+
 
 const rootElement = document.getElementById('root')
 ReactDOM.render(<App />, rootElement)
