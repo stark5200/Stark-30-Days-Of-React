@@ -359,7 +359,7 @@ const App = (props) => {
           <input type='file' name='file' onChange={onChange} />
         </div>
         <div>
-          <button>Submit</button>
+          <button>Click me</button>
         </div>
       </form>
     </div>
